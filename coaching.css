@@ -1,0 +1,229 @@
+/* Utilizamos la misma paleta que la página principal */
+:root {
+  --primary-color: #D1D1D1;    /* Textos claros */
+  --secondary-color: #A7A7A7;  /* Texto secundario */
+  --accent-color: #FFB400;     /* Acentos (dorado) */
+  --bg-color: #121212;         /* Fondo base oscuro */
+  --section-bg: #1F1F1F;        /* Fondo de secciones */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.site-header {
+  background-color: var(--section-bg);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container, .site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Sección Hero */
+.hero {
+  height: 60vh;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-content,
+.hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--bg-color);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--bg-color);
+}
+
+.btn {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e0a800;
+}
+
+/* Sección: Servicios de Coaching */
+.coaching-services {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.coaching-services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.service-card {
+  background-color: var(--section-bg);
+  padding: 2rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* Sección: ¿Qué es el Coaching? */
+.about-coaching {
+  padding: 2rem 1rem;
+  background-color: var(--section-bg);
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.about-coaching h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.about-coaching p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--primary-color);
+}
+
+/* Llamada a la Acción */
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+/* Pie de Página */
+.site-footer {
+  background-color: var(--section-bg);
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

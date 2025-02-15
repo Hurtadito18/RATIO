@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching - Ratio</title>
+  <!-- Enlazamos el CSS exclusivo para la página de coaching -->
+  <link rel="stylesheet" href="coaching.css">
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">Ratio</div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+  
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Coaching Transformador</h1>
+      <p>Impulsa tu crecimiento personal y profesional con estrategias personalizadas.</p>
+      <a href="#coaching-services" class="btn">Conoce Nuestros Servicios</a>
+    </div>
+  </section>
+  
+  <!-- Contenido Principal -->
+  <main class="container">
+    <!-- Sección: Servicios de Coaching -->
+    <section id="coaching-services" class="coaching-services">
+      <h2>Nuestros Servicios de Coaching</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Coaching Ejecutivo</h3>
+          <p>Potencia tus habilidades de liderazgo y toma de decisiones.</p>
+          <a href="coaching-executive.html" class="btn">Más Información</a>
+        </div>
+        <div class="service-card">
+          <h3>Coaching Personal</h3>
+          <p>Encuentra el equilibrio y maximiza tu potencial en todas las áreas de tu vida.</p>
+          <a href="coaching-personal.html" class="btn">Más Información</a>
+        </div>
+        <div class="service-card">
+          <h3>Coaching de Equipos</h3>
+          <p>Fomenta la colaboración y mejora el rendimiento grupal.</p>
+          <a href="coaching-equipos.html" class="btn">Más Información</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección: ¿Qué es el Coaching? -->
+    <section class="about-coaching">
+      <h2>¿Qué es el Coaching?</h2>
+      <p>
+        El coaching es un proceso de acompañamiento que te ayuda a identificar tus metas, superar obstáculos y potenciar tus habilidades. En Ratio, nuestros coaches trabajan contigo para diseñar estrategias personalizadas que impulsan tu crecimiento y te permiten alcanzar el éxito personal y profesional.
+      </p>
+    </section>
+    
+    <!-- Llamada a la Acción -->
+    <section class="cta">
+      <h2>¿Listo para Transformar tu Vida?</h2>
+      <p>Agenda una sesión de coaching y da el primer paso hacia el cambio.</p>
+      <a href="registro-coaching.html" class="btn">Agendar Sesión</a>
+    </section>
+  </main>
+  
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ratio - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Script para el menú móvil -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.site-nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

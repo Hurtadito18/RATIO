@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos - Ratio</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Enlazamos el CSS exclusivo para la página de cursos -->
+  <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">Ratio</div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cursos.html" class="active">Cursos</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+  
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Cursos</h1>
+      <p>Potencia tu crecimiento personal y profesional con nuestros programas especializados.</p>
+    </div>
+  </section>
+  
+  <!-- Sección de Cursos -->
+  <main class="container">
+    <section class="courses-section">
+      <h2>Nuestros Cursos</h2>
+      <div class="courses-grid">
+        <!-- Curso 1: Comunicación Efectiva -->
+        <div class="course-card">
+          <h3>Comunicación Efectiva</h3>
+          <p>Domina el arte de expresarte con claridad y seguridad.</p>
+          <a href="curso1.html" class="btn">Ver más</a>
+        </div>
+        <!-- Curso 2: Autoconocimiento Profundo -->
+        <div class="course-card">
+          <h3>Autoconocimiento Profundo</h3>
+          <p>Descubre tus fortalezas y trabaja en tus áreas de mejora para alcanzar tu máximo potencial.</p>
+          <a href="curso2.html" class="btn">Ver más</a>
+        </div>
+        <!-- Curso 3: Gestión Emocional -->
+        <div class="course-card">
+          <h3>Gestión Emocional</h3>
+          <p>Aprende a identificar y gestionar tus emociones para mejorar tu bienestar.</p>
+          <a href="curso3.html" class="btn">Ver más</a>
+        </div>
+        <!-- Curso 4: Liderazgo y Crecimiento -->
+        <div class="course-card">
+          <h3>Liderazgo y Crecimiento</h3>
+          <p>Desarrolla habilidades de liderazgo y potencia tu desarrollo profesional y personal.</p>
+          <a href="curso4.html" class="btn">Ver más</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ratio - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Script para el menú móvil -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.site-nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Ratio</title>
+  <!-- Enlazamos el CSS exclusivo para la página de blog -->
+  <link rel="stylesheet" href="blog.css">
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">Ratio</div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Blog de Ratio</h1>
+      <p>Reflexiones, historias y consejos para tu crecimiento personal.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Publicaciones -->
+  <main class="container">
+    <section class="blog-posts">
+      <h2>Últimas Publicaciones</h2>
+      <div class="posts-grid">
+         <!-- Post 1 -->
+         <article class="post-card">
+            <h3>El Camino del Crecimiento Personal</h3>
+            <p class="post-meta">Publicado el 5 de Febrero de 2025</p>
+            <p class="post-excerpt">
+              En este artículo exploramos cómo pequeños cambios diarios pueden transformar tu vida. Desde técnicas de mindfulness hasta estrategias para mejorar la comunicación, descubre cómo dar pasos firmes hacia un futuro más pleno.
+            </p>
+            <!-- Contenido completo oculto -->
+            <div class="post-full" style="display: none;">
+              <p>
+                El camino del crecimiento personal no es una línea recta. Requiere autoconocimiento, perseverancia y la disposición de cambiar hábitos que ya no sirven. En este post, profundizamos en diversas técnicas que te ayudarán a identificar áreas de mejora, establecer metas realistas y mantener la motivación en el día a día. Se recomienda comenzar con pequeños cambios, como dedicar 10 minutos diarios a la meditación o a escribir un diario de gratitud. Con el tiempo, estos hábitos se consolidan y se convierten en la base para un cambio duradero.
+              </p>
+              <p>
+                Además, te compartimos algunas historias inspiradoras de personas que han transformado su vida a través del desarrollo personal. Estas narrativas te mostrarán que, aunque el camino pueda parecer desafiante, el esfuerzo vale la pena y el crecimiento es posible para todos.
+              </p>
+            </div>
+            <button class="btn read-more-btn">Leer más</button>
+         </article>
+         <!-- Post 2 -->
+         <article class="post-card">
+            <h3>Estrategias para Conectar con tu Verdadero Potencial</h3>
+            <p class="post-meta">Publicado el 20 de Enero de 2025</p>
+            <p class="post-excerpt">
+              ¿Te has preguntado cómo liberar tu potencial oculto? En este post, compartimos técnicas prácticas y reflexiones profundas para que puedas descubrir y potenciar lo mejor de ti, viviendo con propósito y éxito.
+            </p>
+            <!-- Contenido completo oculto -->
+            <div class="post-full" style="display: none;">
+              <p>
+                Liberar tu verdadero potencial es un proceso que comienza con la autoevaluación y la aceptación de tus fortalezas y debilidades. A través de ejercicios de reflexión y la implementación de nuevos hábitos, puedes descubrir áreas de crecimiento que antes pasaban desapercibidas. Este artículo ofrece un enfoque integral que abarca desde la importancia del autocuidado hasta estrategias para establecer objetivos claros y medibles.
+              </p>
+              <p>
+                También se incluye una guía práctica para que puedas diseñar tu propio plan de desarrollo personal, con recomendaciones para mantener la disciplina y la motivación a lo largo del tiempo. Recuerda que el cambio empieza con el primer paso y que cada pequeño avance suma en el camino hacia el éxito.
+              </p>
+            </div>
+            <button class="btn read-more-btn">Leer más</button>
+         </article>
+      </div>
+    </section>
+
+    <!-- Sección de Comentarios -->
+    <section class="comments-section">
+      <h2>Comentarios</h2>
+      <div class="comments-list">
+         <div class="comment">
+           <p class="comment-author">Ana Martínez</p>
+           <p class="comment-date">6 de Febrero de 2025</p>
+           <p class="comment-text">
+             Este post me inspiró a tomar pequeñas acciones en mi día a día. ¡Muchas gracias por compartir estas ideas tan valiosas!
+           </p>
+         </div>
+         <div class="comment">
+           <p class="comment-author">Carlos López</p>
+           <p class="comment-date">7 de Febrero de 2025</p>
+           <p class="comment-text">
+             Muy interesante lectura, me ayudó a reflexionar sobre mis metas y la forma en que puedo alcanzarlas.
+           </p>
+         </div>
+      </div>
+      <div class="comment-form">
+         <h3>Deja tu comentario</h3>
+         <form action="#" method="post">
+           <input type="text" name="name" placeholder="Tu nombre" required>
+           <input type="email" name="email" placeholder="Tu correo" required>
+           <textarea name="comment" placeholder="Tu comentario" required></textarea>
+           <button type="submit" class="btn">Enviar Comentario</button>
+         </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ratio - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para el menú móvil y funcionalidad de "Leer más" -->
+  <script>
+    // Menú móvil
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.site-nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Funcionalidad "Leer más" que alterna el contenido completo
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const postCard = this.parentElement;
+        const fullContent = postCard.querySelector('.post-full');
+        if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+          fullContent.style.display = 'block';
+          this.textContent = 'Leer menos';
+        } else {
+          fullContent.style.display = 'none';
+          this.textContent = 'Leer más';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

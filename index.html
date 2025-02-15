@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratio - Equilibrio, razón y crecimiento</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos específicos para elementos dinámicos */
+    
+    /* Línea de tiempo para "Cómo Funciona" */
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      background: var(--accent-color);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-item:nth-child(odd):before {
+      right: -10px;
+    }
+    .timeline-item:nth-child(even):before {
+      left: -10px;
+    }
+    
+    /* Slider de Testimonios */
+    .testimonials {
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .testimonial-item {
+      min-width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .slider-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .slider-controls button {
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .slider-controls button:hover {
+      background: #e0a800;
+    }
+    
+    /* Botón de WhatsApp en el Hero */
+    .btn.whatsapp {
+      background: #25D366;
+      color: var(--bg-color);
+      margin-left: 10px;
+    }
+    .btn.whatsapp:hover {
+      background: #1da851;
+    }
+    
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: var(--bg-color);
+      padding: 15px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      background: #1da851;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado con menú -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">Ratio</div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#como-funciona">Cómo Funciona</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#sobre">Sobre Ratio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+  
+  <!-- Sección Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Transforma tu Vida</h1>
+      <p>Descubre herramientas y programas para vivir con equilibrio, razón y crecimiento.</p>
+      <a href="#servicios" class="btn">Explora nuestros servicios</a>
+      <a href="https://wa.link/fgb2lc" class="btn whatsapp" target="_blank">Contáctanos</a>
+    </div>
+  </section>
+  
+  <!-- Sección "Cómo Funciona" - Timeline Dinámico -->
+  <section id="como-funciona" class="how-it-works">
+    <div class="container">
+      <h2>¿Cómo Funciona?</h2>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <h3>Descubre</h3>
+          <p>Explora nuestros programas y encuentra el que mejor se adapte a tus necesidades.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>Participa</h3>
+          <p>Únete a nuestros retos, cursos o sesiones de coaching y comienza tu transformación.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>Crece</h3>
+          <p>Conecta con una comunidad de personas que, como tú, buscan crecer y superarse.</p>
+        </li>
+        <li class="timeline-item">
+          <h3>Comparte</h3>
+          <p>Comparte tus logros y experiencias para inspirar a otros en su camino.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Retos</h3>
+          <p>Programas intensivos para potenciar tu desarrollo personal.</p>
+          <a href="retos.html" class="btn">Ver más</a>
+        </div>
+        <div class="service-card">
+          <h3>Cursos</h3>
+          <p>Aprende a comunicarte y transformar tu vida con nuestros cursos.</p>
+          <a href="cursos.html" class="btn">Ver más</a>
+        </div>
+        <div class="service-card">
+          <h3>Coaching</h3>
+          <p>Sesiones personalizadas para guiarte en tu camino.</p>
+          <a href="coaching.html" class="btn">Ver más</a>
+        </div>
+        <div class="service-card">
+          <h3>Blog</h3>
+          <p>Artículos y recursos para tu crecimiento personal.</p>
+          <a href="blog.html" class="btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de Testimonios - Slider Dinámico -->
+  <section id="testimonios" class="testimonials">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <div class="testimonial-wrapper">
+        <div class="testimonial-item">
+          <p>"Ratio me ayudó a redescubrir mi potencial. Los programas son transformadores y la comunidad es increíble."</p>
+          <p><strong>- Laura S.</strong></p>
+        </div>
+        <div class="testimonial-item">
+          <p>"Participar en los retos y coaching cambió mi vida. Ahora me siento más segura y motivada para alcanzar mis metas."</p>
+          <p><strong>- Miguel A.</strong></p>
+        </div>
+        <div class="testimonial-item">
+          <p>"Los cursos de Ratio me dieron las herramientas necesarias para mejorar mi comunicación y relaciones personales."</p>
+          <p><strong>- Sofía R.</strong></p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button id="prev-btn">&laquo;</button>
+        <button id="next-btn">&raquo;</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección Sobre Ratio -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2>Sobre Ratio</h2>
+      <p>
+        Ratio es una plataforma dedicada a ayudarte a encontrar el equilibrio a través del desarrollo personal. Con programas diseñados para impulsar tu crecimiento, nuestra misión es inspirarte a vivir con propósito y alcanzar tu máximo potencial.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Ratio - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.link/fgb2lc" class="whatsapp-float" target="_blank">WA</a>
+  
+  <!-- Scripts -->
+  <script>
+    // Menú móvil
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.site-nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Slider de Testimonios
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const testimonialWrapper = document.querySelector('.testimonial-wrapper');
+    let currentIndex = 0;
+    const totalTestimonials = document.querySelectorAll('.testimonial-item').length;
+    
+    function updateSlider() {
+      testimonialWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+      updateSlider();
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalTestimonials;
+      updateSlider();
+    });
+  </script>
+</body>
+</html>
+
